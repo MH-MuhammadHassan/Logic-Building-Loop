@@ -1,48 +1,41 @@
 void main() {
-  // 💨 Print the sum of ODD numbers between 10 and 100, which are greater than 50.
-  {
-    int sum = 0;
-    for (int i = 10; i <= 100; i++) {
-      if (i % 2 != 0 && i > 50) {
-        sum += i;
-      }
-    }
-    print('Sum of odd numbers greater than 50 between 10 and 100: $sum');
-  }
+  // 💨 print sum of ODD numbers between 10 and 100, which are greater than 50.
+  // int sum = 0;
+  // for (int i = 10; i <= 100; i++) {
+  //   if (i % 2 != 0 && i > 50) {
+  //     sum += i;
+  //   }
+  // }
+  // print(sum);
 
-  // 💨 Print the last digit of the number.
-  {
-    int number = 123459;
-    int lastDigit = number % 10; // Returns the last digit
-    print('Last digit of $number: $lastDigit');
-  }
+// 💨💨 modulus by 10 = print last digit of the number
+// 💨💨 divide by 10 = remove last digit of the number
 
-  // 💨 Remove the last digit of the number.
-  {
-    int number = 1234599;
-    number = number ~/ 10; // Removes the last digit
-    print('Number after removing the last digit: $number');
-  }
+  // 💨 PRINT last digit of the number => 123459 > output = 9
+  // int digits = 123459;
+  // int y = digits % 10; // return last digit output => 9
+  // print(y);
 
-  // 💨 Count the number of digits.
-  {
-    int number = 123456;
-    int count = 0;
-    while (number != 0) {
-      number = number ~/ 10; // Remove the last digit
-      count++;
-    }
-    print('Number of digits: $count');
-  }
+  // 💨 REMOVE last digit of the number => 1234599 > output = 123459
+  // int digits = 1234599;
+  // digits = digits ~/ 10; // remove last digit
+  // print(digits);
 
-  // 💨 Print the sum of the digits.
-  {
-    int number = 123456;
-    int sum = 0;
-    while (number > 0) {
-      sum += number % 10; // Add the last digit to sum
-      number = number ~/ 10; // Remove the last digit
-    }
-    print('Sum of the digits: $sum');
+  // 💨 count of digits => 123456 > output = 6
+  // int digits = 123459;
+  // int count = 0;
+  // while (digits != 0) {
+  //   digits = digits ~/ 10; //         <  ~/ = work as modulus operator  >
+  //   count++;
+  // }
+  // print(count);
+
+// 💨 print sum of the digits => 123456 > output = 21
+  int x = 123456;
+  int sum = 0;
+  while (x > 0) {
+    sum = sum + (x % 10); // Add the last digit of x (6) to sum
+    x = x ~/ 10; // Remove the last digit of x
   }
+  print(sum); // Output: 21
 }
